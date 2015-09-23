@@ -1,0 +1,51 @@
+{
+  "generator-veams": {
+    "projectName": "metroline",
+    "projectAuthor": "Josefine Lehmann",
+    "taskRunner": [
+      "grunt"
+    ],
+    "templateEngine": "assemble",
+    "installExtendedLayout": true,
+    "installPlugin": false,
+    "gulpModules": [],
+    "gruntModules": [
+      "grunt-autoprefixer",
+      "grunt-browser-sync",
+      "grunt-browserify",
+      "grunt-combine-mq",
+      "grunt-contrib-htmlmin",
+      "grunt-contrib-uglify",
+      "grunt-dr-svg-sprites",
+      "grunt-responsive-images",
+      "grunt-version",
+      "grunt-contrib-handlebars",
+      "grunt-browserify",
+      "grunt-contrib-uglify"
+    ],
+    "features": [
+      "createDevFolder"
+    ],
+    "jsLibs": [
+      "jquery",
+      "exoskeleton"
+    ],
+    "cssLibs": [
+      "neat"
+    ],
+    "testAndQA": true,
+    "testAndQALibs": [
+      "hintingHTML"
+    ],
+    "veamsPackages": [
+      "veamsMethodology",
+      "veamsSCSS",
+      "veamsJS",
+      "veamsComponents"
+    ],
+    "docs": [],
+    "installProxy": false,
+    "proxyHost": "0.0.0.0 ",
+    "proxyPort": 80
+  }
+}
