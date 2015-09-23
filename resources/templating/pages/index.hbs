@@ -1,11 +1,14 @@
 ---
-title: Build Better Prototypes with PG
+title: Index | by Josefine Lehmann for prophets
 menuLink: Home
 sortOrder: 01
 ---
 
 {{#extend "lyt-default"}}
-	{{#content "body"}}
-		<h3>Place your content here!</h3>
+	{{#content "main"}}
+		{{#with index.content-text}}
+			{{> c-content-text }}
+		{{/with}}
 	{{/content}}
+
 {{/extend}}

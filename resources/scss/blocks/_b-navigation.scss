@@ -1,0 +1,26 @@
+/* ===================================================
+NAVIGATION
+=================================================== */
+
+.b-navigation {
+	overflow: hidden;
+
+	.navigation__list-item {
+		margin-top: $margin-base;
+		float: left;
+		text-transform: uppercase;
+		padding: 0 $margin-base * 3 0 0;
+
+		&:last-child {
+			padding: 0;
+		}
+	}
+
+	.navigation__list-element {
+		//color: $color-white;
+		color: #4294f0;
+		font-weight: bold;
+		text-decoration: none;
+		font-size: 1.4rem;
+	}
+}

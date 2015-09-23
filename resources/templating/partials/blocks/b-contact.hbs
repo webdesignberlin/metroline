@@ -1,0 +1,23 @@
+---
+block: contact
+---
+
+<div class="b-contact">
+	<ul class="contact__list">
+		{{#each data}}
+			<li class="contact__list-item{{#if itemClass}} {{itemClass}}{{/if}}">
+				{{#if target}}
+					<a href="{{target}}" title="{{listContent}}"
+					   class="contact__list-element{{#if elementClass}} {{elementClass}}{{/if}}">
+						{{{listContent}}}
+					</a>
+				{{else}}
+					<p class="list-item__content">
+						{{{itemContent}}}
+					</p>
+
+				{{/if}}
+			</li>
+		{{/each}}
+	</ul>
+</div>

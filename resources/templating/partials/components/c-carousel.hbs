@@ -1,0 +1,15 @@
+---
+component: carousel
+---
+
+<div class="c-carousel{{#if carouselModifierClass}}--{{carouselModifierClass}}{{/if}}{{#if carouselClass}} {{carouselClass}}{{/if}}"
+     data-css="c-carousel">
+	<ul class="carousel__list">
+		{{#each data}}
+			<li class="carousel__list-item{{#if itemClass}} {{itemClass}}{{/if}}">
+				<img src="{{carouselContent}}" alt="Carousel Image" class="carousel__image"/>
+			</li>
+		{{/each}}
+	</ul>
+
+</div>

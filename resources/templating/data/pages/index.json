@@ -1,0 +1,76 @@
+{
+	"navigation": {
+		"data": [
+			{
+				"target": "#",
+				"listContent": "Home",
+				"elementClass": "is-active"
+			},
+			{
+				"target": "#",
+				"listContent": "Topic"
+			},
+			{
+				"target": "#",
+				"listContent": "Reasoning"
+			},
+			{
+				"target": "#",
+				"listContent": "Ownership"
+			},
+			{
+				"target": "#",
+				"listContent": "Timing"
+			},
+			{
+				"target": "#",
+				"listContent": "Contact"
+			}
+		],
+		"language-switch": {
+			"data": [
+				{
+					"target": "#",
+					"listContent": "NL"
+				},
+				{
+					"target": "#",
+					"listContent": "FR",
+					"elementClass": "is-active"
+				}
+			]
+		}
+	},
+	"carousel": {
+		"data": [
+			{
+				"carouselContent": ""
+			}
+		]
+	},
+	"stage-bottom": {
+		"stageHeadline": "Start your journey"
+	},
+	"content-text": {
+		"contentHeadline": "Bruxelles est une ville qui vie, qui respire. Qui Bouge.",
+		"contentText": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."
+	},
+	"contact": {
+		"data": [
+			{
+				"target": "+3270232000",
+				"listContent": "+32 70 23 20 00"
+			},
+			{
+				"target": "mailto:bonjour@ligne3.be",
+				"listContent": "bonjour@ligne3.be"
+			},
+			{
+				"itemContent": "STIB<br/>Koningstraat 76<br/>1040 Brussel"
+			}
+		]
+	},
+	"copyright": {
+		"copyrightContent": "© STIB 2015"
+	}
+}

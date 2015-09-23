@@ -1,0 +1,16 @@
+/* ===================================================
+REGION FOOTER ASIDE
+=================================================== */
+
+.r-footer-aside {
+	position: absolute;
+	right: 4.21875%;
+	bottom: 1rem;
+
+	@include media($bp-mobile-l) {
+		position: relative;
+		right: inherit;
+		bottom: inherit;
+		margin-top: $margin-base * 4;
+	}
+}

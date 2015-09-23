@@ -1,0 +1,40 @@
+/* ===================================================
+contact
+=================================================== */
+
+.b-contact {
+	overflow: hidden;
+
+	.contact__list-item {
+		@include span-columns(4);
+
+		@include media($bp-tablet-p) {
+			@include span-columns(3.5);
+		}
+
+		@include media($bp-mobile-l) {
+			@include span-columns(12);
+
+			margin-right: 0;
+			text-align: center;
+		}
+	}
+
+	.contact__list-element,
+	.list-item__content {
+		color: $color-white;
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+
+	.contact__list-element {
+		font-size: 1.8rem;
+		line-height: 3;
+		text-decoration: none;
+	}
+
+	.list-item__content {
+		font-size: 1.4rem;
+		line-height: 1.3;
+	}
+}

@@ -1,0 +1,16 @@
+---
+block: language switch
+---
+
+<div class="b-language-switch">
+	<ul class="language-switch__list">
+		{{#each data}}
+			<li class="language-switch__list-item{{#if itemClass}} {{itemClass}}{{/if}}">
+				<a href="{{target}}" title="{{listContent}}"
+				   class="language-switch__list-element{{#if elementClass}} {{elementClass}}{{/if}}">
+					{{{listContent}}}
+				</a>
+			</li>
+		{{/each}}
+	</ul>
+</div>

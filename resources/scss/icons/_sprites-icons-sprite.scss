@@ -1,0 +1,65 @@
+@mixin sprites-bg-svg() {
+	background-image: url("../img/sprites/sprites-icons-sprite.svg");
+}
+%sprites-bg-svg {
+	@include sprites-bg-svg();
+}
+@mixin sprites-bg-size() {
+	background-size: 935px 495px;
+}
+%sprites-bg-size {
+	@include sprites-bg-size();
+}
+
+@mixin sprites-bg-png() {
+	background-image: url("../img/sprites/sprites-icons-sprite-medium.png");
+}
+%sprites-bg-png {
+	@include sprites-bg-png();
+}
+@mixin sprites-email() {
+	@extend %sprites-bg-size;
+	@extend %sprites-bg-svg;
+	width: 14px;
+	height: 14px;
+	background-position: 0 0;
+	@at-root .no-svg & {
+		@extend %sprites-bg-png;
+	}
+}
+
+%sprites-email {
+	@include sprites-email();
+}
+
+@mixin sprites-phone() {
+	@extend %sprites-bg-size;
+	@extend %sprites-bg-svg;
+	width: 415px;
+	height: 415px;
+	background-position: -20px 0;
+	@at-root .no-svg & {
+		@extend %sprites-bg-png;
+	}
+}
+
+%sprites-phone {
+	@include sprites-phone();
+}
+
+@mixin sprites-pin() {
+	@extend %sprites-bg-size;
+	@extend %sprites-bg-svg;
+	width: 486px;
+	height: 486px;
+	background-position: -440px 0;
+	@at-root .no-svg & {
+		@extend %sprites-bg-png;
+	}
+}
+
+%sprites-pin {
+	@include sprites-pin();
+}
+
+

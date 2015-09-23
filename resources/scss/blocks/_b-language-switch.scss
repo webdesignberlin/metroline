@@ -1,0 +1,26 @@
+/* ===================================================
+LANGUAGE SWITCH
+=================================================== */
+
+.b-language-switch {
+	float: right;
+	background-color: $color-green;
+	padding: $margin-base $margin-base * 1.5;
+
+	.language-switch__list-item {
+		float: left;
+	}
+
+	.language-switch__list-element {
+		color: $color-white;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 1.4rem;
+		font-weight: bold;
+		padding: 0 $margin-base * 0.5;
+
+		&.is-active {
+			color: $color-dark;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+/* ===================================================
+PARTNER LOGOS
+=================================================== */
+
+.b-partner-logos {
+	overflow: hidden;
+	float: right;
+
+	.partner-logos__container {
+		float: left;
+		margin-right: $margin-base;
+		line-height: 2;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		img {
+			vertical-align: bottom;
+		}
+	}
+}

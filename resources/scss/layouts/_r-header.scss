@@ -1,0 +1,17 @@
+/* ===================================================
+REGION HEADER
+=================================================== */
+
+.r-header {
+	overflow: hidden;
+
+	.r-header-left {
+		@include span-columns(3);
+	}
+
+	.r-header-right {
+		@include span-columns(7.5);
+
+		float: right;
+	}
+}

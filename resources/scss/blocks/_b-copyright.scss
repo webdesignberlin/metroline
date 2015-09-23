@@ -1,0 +1,13 @@
+/* ===================================================
+COPYRIGHT
+=================================================== */
+
+.b-copyright {
+	color: $color-white;
+	font-weight: bold;
+	font-size: 1.4rem;
+
+	@include media($bp-mobile-l) {
+		text-align: center;
+	}
+}

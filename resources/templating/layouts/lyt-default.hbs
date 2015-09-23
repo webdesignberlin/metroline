@@ -4,32 +4,100 @@
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
 
-{{> b-version}}
+	{{> b-version}}
 
 <html lang="en" class="no-js"> <!--<![endif]-->
 
 <head>
-	
+
 	{{#block "metadata"}}
 		{{> _metadata }}
 	{{/block}}
 	{{#block "styles"}}
 		{{> _styles }}
 	{{/block}}
-	
+
 </head>
 
 <body class="{{bodyclass}}">
-	
-	{{#block "body"}}
-		{{> body }}
-	{{/block}}
-	
-	<!-- Scripts
-	================================================== --> 
-	{{#block "scripts"}}
-		{{> _scripts }}
-	{{/block}}
-	
+
+<div class="page-wrapper">
+	<header class="r-header">
+		{{#block "header"}}
+			<div class="r-header-left">
+				{{#block "header-left"}}
+					{{> b-logo }}
+				{{/block}}
+			</div>
+			<div class="r-header-right">
+				{{#block "header-right"}}
+					{{#with index.navigation}}
+						{{> b-navigation }}
+					{{/with}}
+				{{/block}}
+			</div>
+		{{/block}}
+	</header>
+
+
+	<div class="r-stage">
+		{{#block "stage"}}
+			<div class="r-stage-top">
+				{{#block "stage-top"}}
+					{{#with index.carousel}}
+						{{> c-carousel }}
+					{{/with}}
+				{{/block}}
+			</div>
+			<div class="r-stage-bottom is-container">
+				{{#block "stage-bottom"}}
+					{{#with index.stage-bottom}}
+						{{> b-stage-bottom }}
+					{{/with}}
+				{{/block}}
+			</div>
+		{{/block}}
+	</div>
+
+
+	<main id="main" class="r-main">
+		<aside class="r-content-aside">
+			{{#block "aside"}}
+				{{> b-partner-logos }}
+			{{/block}}
+		</aside>
+		<div class="r-content">
+			{{#block "main"}}{{/block}}
+		</div>
+	</main>
+
+
+	<footer class="r-footer">
+		{{#block "footer"}}
+			<div class="r-footer-main is-container">
+				{{#block "footer-main"}}
+					{{#with index.contact}}
+						{{> b-contact }}
+					{{/with}}
+				{{/block}}
+			</div>
+			<div class="r-footer-aside">
+				{{#block "footer-aside"}}
+					{{#with index.copyright}}
+						{{> b-copyright }}
+					{{/with}}
+				{{/block}}
+			</div>
+		{{/block}}
+	</footer>
+</div>
+
+
+<!-- Scripts
+================================================== -->
+{{#block "scripts"}}
+	{{> _scripts }}
+{{/block}}
+
 </body>
 </html>

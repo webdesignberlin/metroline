@@ -1,0 +1,19 @@
+---
+block: navigation
+---
+
+<nav class="b-navigation">
+
+	<ul class="navigation__list">
+		{{#each data}}
+			<li class="navigation__list-item{{#if itemClass}} {{itemClass}}{{/if}}">
+				<a href="{{target}}" title="{{listContent}}"
+				   class="navigation__list-element{{#if elementClass}} {{elementClass}}{{/if}}">
+					{{{listContent}}}
+				</a>
+			</li>
+		{{/each}}
+	</ul>
+
+		{{> b-language-switch language-switch}}
+</nav>
