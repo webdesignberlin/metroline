@@ -1,0 +1,88 @@
+{
+	"navigation": {
+		"data": [
+			{
+				"target": "#",
+				"listContent": "Home",
+				"elementClass": "is-active"
+			},
+			{
+				"target": "#",
+				"listContent": "Topic"
+			},
+			{
+				"target": "#",
+				"listContent": "Reasoning"
+			},
+			{
+				"target": "#",
+				"listContent": "Ownership"
+			},
+			{
+				"target": "#",
+				"listContent": "Timing"
+			},
+			{
+				"target": "#",
+				"listContent": "Contact"
+			}
+		],
+		"language-switch": {
+			"data": [
+				{
+					"target": "#",
+					"listContent": "NL"
+				},
+				{
+					"target": "#",
+					"listContent": "FR",
+					"elementClass": "is-active"
+				}
+			]
+		}
+	},
+	"carousel": {
+		"data": [
+			{
+				"figureId": "figure-content",
+				"figureModifierClass": "simple",
+				"pictureAlt": "Simple Picture",
+				"pictureUrlStd": "img/temp/pictures/carousel/pic-01--768.jpg",
+				"picture480": "img/temp/pictures/carousel/pic-01--480.jpg",
+				"picture480_2x": "img/temp/pictures/carousel/pic-01--480_2x.jpg",
+				"picture481": "img/temp/pictures/carousel/pic-01--640.jpg",
+				"picture481_2x": "img/temp/pictures/carousel/pic-01--640_2x.jpg",
+				"picture768": "img/temp/pictures/carousel/pic-01--768.jpg",
+				"picture768_2x": "img/temp/pictures/carousel/pic-01--768_2x.jpg",
+				"picture1024": "img/temp/pictures/carousel/pic-01--1024.jpg",
+				"picture1024_2x": "img/temp/pictures/carousel/pic-01--1024_2x.jpg",
+				"picture1280": "img/temp/pictures/carousel/pic-01--1280.jpg",
+				"picture1281": "img/temp/pictures/carousel/pic-01--1281.jpg"
+			}
+		]
+	},
+	"stage-bottom": {
+		"stageHeadline": "Start your journey"
+	},
+	"contact": {
+		"data": [
+			{
+				"target": "+3270232000",
+				"listContent": "+32 70 23 20 00",
+				"itemClass": "is-phone"
+			},
+			{
+				"target": "mailto:bonjour@ligne3.be",
+				"listContent": "bonjour@ligne3.be",
+				"itemClass": "is-email"
+			},
+			{
+				"itemContent": "STIB<br/>Koningstraat 76<br/>1040 Brussel",
+				"itemClass": "is-address"
+			}
+		]
+	},
+	"copyright": {
+		"copyrightContent": "© STIB 2015"
+	}
+}

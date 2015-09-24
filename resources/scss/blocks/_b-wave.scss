@@ -1,0 +1,16 @@
+/* ===================================================
+WAVE
+=================================================== */
+
+.b-wave {
+	transform: translateY(-85%);
+
+	@include media($bp-tablet-p) {
+		display: none;
+	}
+
+	svg {
+		width: 100%;
+		height: auto;
+	}
+}

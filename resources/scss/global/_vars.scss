@@ -9,6 +9,7 @@ $grid-columns: 12;
 $max-width: 960px;
 
 // Define your breakpoints for Bourbon Neat
+$bp-desktop-l: new-breakpoint(min-width 1440px 12);
 $bp-tablet-p: new-breakpoint(max-width 768px 12);
 $bp-mobile-l: new-breakpoint(max-width 640px 12);
 $bp-mobile-p: new-breakpoint(max-width 480px 8);
@@ -30,8 +31,15 @@ $color-white: #fff;
 $color-dark: #1c1f00;
 $color-green: #b3c907;
 $color-blue: #0b4982;
+$bg-highlight-2: #e1e6be;
 
 //alias
 
 $color-highlight-1: $color-green;
 $color-highlight-2: $color-blue;
+
+
+/* ---------------------------------------------------
+Stage Margin Top Position
+--------------------------------------------------- */
+$stage-top: -$margin-base * 15;

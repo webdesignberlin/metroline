@@ -24,16 +24,16 @@
 <div class="page-wrapper">
 	<header class="r-header">
 		{{#block "header"}}
-			<div class="r-header-left">
-				{{#block "header-left"}}
-					{{> b-logo }}
-				{{/block}}
-			</div>
-			<div class="r-header-right">
-				{{#block "header-right"}}
-					{{#with index.navigation}}
+			<div class="r-header-top">
+				{{#block "header-top"}}
+					{{#with blocks.navigation}}
 						{{> b-navigation }}
 					{{/with}}
+				{{/block}}
+			</div>
+			<div class="r-header-bottom">
+				{{#block "header-bottom"}}
+					{{> b-logo }}
 				{{/block}}
 			</div>
 		{{/block}}
@@ -44,28 +44,25 @@
 		{{#block "stage"}}
 			<div class="r-stage-top">
 				{{#block "stage-top"}}
-					{{#with index.carousel}}
+					{{#with blocks.carousel}}
 						{{> c-carousel }}
 					{{/with}}
 				{{/block}}
 			</div>
 			<div class="r-stage-bottom is-container">
 				{{#block "stage-bottom"}}
-					{{#with index.stage-bottom}}
+					{{#with blocks.stage-bottom}}
 						{{> b-stage-bottom }}
 					{{/with}}
 				{{/block}}
 			</div>
 		{{/block}}
+
+		{{> b-wave-white }}
 	</div>
 
 
 	<main id="main" class="r-main">
-		<aside class="r-content-aside">
-			{{#block "aside"}}
-				{{> b-partner-logos }}
-			{{/block}}
-		</aside>
 		<div class="r-content">
 			{{#block "main"}}{{/block}}
 		</div>
@@ -76,14 +73,14 @@
 		{{#block "footer"}}
 			<div class="r-footer-main is-container">
 				{{#block "footer-main"}}
-					{{#with index.contact}}
+					{{#with blocks.contact}}
 						{{> b-contact }}
 					{{/with}}
 				{{/block}}
 			</div>
 			<div class="r-footer-aside">
 				{{#block "footer-aside"}}
-					{{#with index.copyright}}
+					{{#with blocks.copyright}}
 						{{> b-copyright }}
 					{{/with}}
 				{{/block}}

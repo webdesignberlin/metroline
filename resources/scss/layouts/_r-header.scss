@@ -5,12 +5,12 @@ REGION HEADER
 .r-header {
 	overflow: hidden;
 
-	.r-header-left {
-		@include span-columns(3);
+	.r-header-top {
+		@include span-columns(12);
 	}
 
-	.r-header-right {
-		@include span-columns(7.5);
+	.r-header-bottom {
+		@include span-columns(12);
 
 		float: right;
 	}

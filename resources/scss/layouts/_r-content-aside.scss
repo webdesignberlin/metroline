@@ -5,4 +5,16 @@ REGION CONTENT ASIDE
 .r-content-aside {
 	display: block;
 	overflow: hidden;
+	position: absolute;
+	transform: translateY(-200%);
+	right: 13%;
+
+	@include media($bp-tablet-p) {
+		transform: translateY(-150%);
+		right: 2%;
+	}
+
+	@include media($bp-desktop-l) {
+		transform: translateY(-300%);
+	}
 }

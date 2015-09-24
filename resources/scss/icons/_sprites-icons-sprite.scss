@@ -5,7 +5,7 @@
 	@include sprites-bg-svg();
 }
 @mixin sprites-bg-size() {
-	background-size: 935px 495px;
+	background-size: 1460px 800px;
 }
 %sprites-bg-size {
 	@include sprites-bg-size();
@@ -20,8 +20,8 @@
 @mixin sprites-email() {
 	@extend %sprites-bg-size;
 	@extend %sprites-bg-svg;
-	width: 14px;
-	height: 14px;
+	width: 415px;
+	height: 341px;
 	background-position: 0 0;
 	@at-root .no-svg & {
 		@extend %sprites-bg-png;
@@ -37,7 +37,7 @@
 	@extend %sprites-bg-svg;
 	width: 415px;
 	height: 415px;
-	background-position: -20px 0;
+	background-position: -420px 0;
 	@at-root .no-svg & {
 		@extend %sprites-bg-png;
 	}
@@ -50,9 +50,9 @@
 @mixin sprites-pin() {
 	@extend %sprites-bg-size;
 	@extend %sprites-bg-svg;
-	width: 486px;
-	height: 486px;
-	background-position: -440px 0;
+	width: 612px;
+	height: 792px;
+	background-position: -840px 0;
 	@at-root .no-svg & {
 		@extend %sprites-bg-png;
 	}

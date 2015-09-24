@@ -3,7 +3,16 @@ block: navigation
 ---
 
 <nav class="b-navigation">
-
+	<h2 class="is-hidden">Navigation</h2>
+	<input type="checkbox" id="nav" name="nav" class="navigation__checkbox"/>
+	<label for="nav" class="navigation__label">
+		<span class="navigation__text"> Menü </span>
+		<span class="navigation__icon-wrapper">
+			<span class="navigation__icon"></span>
+			<span class="navigation__icon"></span>
+			<span class="navigation__icon"></span>
+		</span>
+	</label>
 	<ul class="navigation__list">
 		{{#each data}}
 			<li class="navigation__list-item{{#if itemClass}} {{itemClass}}{{/if}}">
@@ -15,5 +24,5 @@ block: navigation
 		{{/each}}
 	</ul>
 
-		{{> b-language-switch language-switch}}
+	{{> b-language-switch language-switch}}
 </nav>

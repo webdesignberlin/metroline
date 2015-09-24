@@ -3,7 +3,115 @@ NAVIGATION
 =================================================== */
 
 .b-navigation {
-	overflow: hidden;
+	float: right;
+	position: relative;
+
+	/*
+	Burger
+	----------------------- */
+	.navigation__checkbox {
+		height: 0;
+		overflow: hidden;
+		width: 0;
+	}
+
+	.navigation__checkbox:checked {
+		+ .navigation__label {
+			.navigation__icon {
+
+				&:nth-child(1) {
+					@include transform(rotate(135deg));
+
+					top: 16px;
+				}
+
+				&:nth-child(2) {
+					opacity: 0;
+					left: -60px;
+				}
+
+				&:nth-child(3) {
+					@include transform(rotate(-135deg));
+
+					top: 16px;
+				}
+			}
+			+ .navigation__list {
+				transition: transform $transition-duration $transition-ease-method;
+				transform: translateX(7px);
+			}
+		}
+
+	}
+
+	.navigation__label {
+		@include transform(rotate(0deg));
+		@include transition(.5s ease-in-out);
+
+		width: 33px;
+		height: 32px;
+		position: relative;
+		cursor: pointer;
+		float: right;
+		margin: 5px 10px;
+		display: none;
+
+		@include media($bp-tablet-p) {
+			display: block;
+		}
+	}
+
+	.navigation__icon-wrapper {
+		.navigation__icon {
+			@include transform(rotate(0deg));
+			@include transition(.25s ease-in-out);
+
+			display: block;
+			position: absolute;
+			height: 2px;
+			width: 100%;
+			background: $color-white;
+			opacity: 1;
+			left: 0;
+
+			&:nth-child(1) {
+				top: 0;
+			}
+
+			&:nth-child(2) {
+				top: 14px;
+			}
+
+			&:nth-child(3) {
+				top: 28px;
+			}
+		}
+	}
+
+	.navigation__text {
+		@include hidden-text;
+	}
+
+	/*
+	List
+	----------------------- */
+	.navigation__list {
+		float: left;
+		margin-right: $margin-base;
+
+		@include media($bp-tablet-p) {
+			background-color: $color-green;
+			transition: transform $transition-duration $transition-ease-method;
+			transform: translateX(150px);
+			position: fixed;
+			top: 42px;
+			padding: 0 $margin-base;
+			margin-right: 0;
+			opacity: 0.9;
+			z-index: 10;
+			width: 145px;
+		}
+	}
 
 	.navigation__list-item {
 		margin-top: $margin-base;
@@ -14,13 +122,54 @@ NAVIGATION
 		&:last-child {
 			padding: 0;
 		}
+
+		@include media($bp-tablet-p) {
+			float: none;
+			padding-bottom: $margin-base;
+
+			&:last-child {
+				padding-bottom: $margin-base;
+			}
+		}
 	}
 
 	.navigation__list-element {
-		//color: $color-white;
-		color: #4294f0;
+		color: $color-white;
 		font-weight: bold;
 		text-decoration: none;
 		font-size: 1.4rem;
+		position: relative;
+
+		&::after {
+			@extend %pseudo;
+			@include transform(translateY(7px));
+
+			transition: opacity 0.3s, transform 0.3s, bottom 0.3s;
+			opacity: 0;
+			bottom: -10px;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background: rgba($color-green, 1);
+
+			@include media($bp-tablet-p) {
+				display: none;
+
+			}
+		}
+
+		&:hover,
+		&:focus,
+		&.is-active {
+			&::after {
+				transition: opacity 0.3s, transform 0.3s, bottom 0.3s;
+				opacity: 1;
+				bottom: 0;
+
+				@include media($bp-tablet-p) {
+					display: none;
+				}
+			}
+		}
 	}
 }

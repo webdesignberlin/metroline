@@ -4,6 +4,11 @@ LOGO
 
 .b-logo {
 	margin-left: $margin-base * 5.5;
-	margin-top: $margin-base * 3.5;
+
+	@include media($bp-tablet-p) {
+		@include transform (scale(.8));
+
+		margin-left: 0;
+	}
 
 }

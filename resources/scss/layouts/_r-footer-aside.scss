@@ -7,7 +7,7 @@ REGION FOOTER ASIDE
 	right: 4.21875%;
 	bottom: 1rem;
 
-	@include media($bp-mobile-l) {
+	@include media($bp-tablet-p) {
 		position: relative;
 		right: inherit;
 		bottom: inherit;

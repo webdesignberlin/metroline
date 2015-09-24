@@ -3,20 +3,53 @@ contact
 =================================================== */
 
 .b-contact {
-	overflow: hidden;
 
 	.contact__list-item {
 		@include span-columns(4);
 
 		@include media($bp-tablet-p) {
-			@include span-columns(3.5);
-		}
-
-		@include media($bp-mobile-l) {
 			@include span-columns(12);
 
 			margin-right: 0;
-			text-align: center;
+		}
+	}
+
+	.contact__list-item {
+		position: relative;
+
+		&::before {
+			@extend %pseudo;
+			@include transform (scale(.08));
+
+			transform-origin: 0 0;
+			left: 0;
+		}
+		&.is-phone {
+			&::before {
+				@include sprites-phone();
+
+				top: 10px;
+			}
+		}
+
+		&.is-email {
+			&::before {
+				@include sprites-email;
+
+				top: 10px;
+			}
+		}
+
+		&.is-address {
+			&::before {
+				@include sprites-pin();
+
+				top: -5px;
+
+				@include media($bp-tablet-p) {
+					left: -8px;
+				}
+			}
 		}
 	}
 
@@ -25,6 +58,7 @@ contact
 		color: $color-white;
 		font-weight: bold;
 		margin-bottom: 0;
+		padding-left: $margin-base * 4.5;
 	}
 
 	.contact__list-element {

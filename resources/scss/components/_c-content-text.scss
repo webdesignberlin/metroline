@@ -7,12 +7,98 @@ Global Styles
 --------------------------------------------------- */
 
 [data-css="c-content-text"] {
-	@include span-columns(5);
+
+	.content-text__inner {
+		z-index: 9;
+		position: relative;
+	}
+	.content-text__text {
+		color: $color-dark;
+		font-size: 1.4rem;
+	}
+}
+
+/* ---------------------------------------------------
+Content Text Center
+--------------------------------------------------- */
+
+.c-content-text {
+	@include span-columns(6);
 
 	float: none;
 	margin: 0 auto;
 
+	.content-text__inner {
+		background-color: $color-white;
+	}
+
+	@include media($bp-tablet-p) {
+		@include span-columns(8);
+
+		float: none;
+		margin: $margin-base * 3 auto 0;
+	}
+
+	@include media($bp-mobile-l) {
+		@include span-columns(12);
+	}
+
 	&:last-child {
 		margin-right: auto;
+	}
+}
+
+/* ---------------------------------------------------
+Content Text Left
+--------------------------------------------------- */
+
+.c-content-text--left {
+	.content-text__inner {
+		@include span-columns(6);
+
+		@include media($bp-mobile-l) {
+			@include span-columns(12);
+		}
+	}
+
+	.content-text__image-wrapper {
+		@include span-columns(5);
+		@include shift(1);
+
+		@include media($bp-mobile-l) {
+			@include span-columns(12);
+			@include shift(0);
+		}
+	}
+
+	.content-text__text {
+		position: relative;
+
+		//&::before {
+		//	@extend %pseudo;
+		//
+		//	width: 265px;
+		//	height: 6px;
+		//	background-color: $color-green;
+		//	bottom: -103px;
+		//	left: 43.5%;
+		//	border-bottom: 70px solid $bg-highlight-2;
+		//	padding-bottom: 6px;
+		//}
+		//
+		//&::after {
+		//	@extend %pseudo;
+		//
+		//	width: 6px;
+		//	height: 75px;
+		//	background-color: $color-green;
+		//	bottom: -103px;
+		//	left: 43.5%;
+		//}
+	}
+
+	.content-text__image {
+		width: 100%;
+		height: auto;
 	}
 }

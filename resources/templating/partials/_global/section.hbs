@@ -1,0 +1,10 @@
+<section class="section-wrapper{{#if options.classes}} {{options.classes}}{{/if}}">
+	{{#if options.aside}}
+		<aside class="r-content-aside">
+			{{> b-partner-logos }}
+		</aside>
+	{{/if}}
+	<div class="section__container{{#unless options.full-width}} is-container{{/unless}}">
+		{{{yield}}}
+	</div>
+</section>

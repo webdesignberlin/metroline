@@ -58,8 +58,8 @@ module.exports = {
 			{
 				expand: true,
 				src: ['**.{jpg,gif,png}'],
-				cwd: '<%= paths.src %>/assets/img/temp/base/caroussel',
-				dest: '<%= paths.src %>/assets/img/temp/pictures/caroussel'
+				cwd: '<%= paths.src %>/assets/img/temp/base/carousel',
+				dest: '<%= paths.src %>/assets/img/temp/pictures/carousel'
 			}
 		]
 	}

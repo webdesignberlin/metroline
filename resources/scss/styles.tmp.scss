@@ -33,10 +33,14 @@
 @import "layouts/_r-footer-aside";
 @import "layouts/_r-footer";
 @import "layouts/_r-header";
-@import "layouts/_r-stage-bottom";
+@import "layouts/_r-main";
+@import "layouts/_stage";
 
 // Components
+@import "components/_c-carousel";
 @import "components/_c-content-text";
+@import "components/_c-figure";
+@import "components/_c-picture";
 
 // Blocks
 @import "blocks/_b-contact";
@@ -45,6 +49,7 @@
 @import "blocks/_b-logo";
 @import "blocks/_b-navigation";
 @import "blocks/_b-partner-logos";
+@import "blocks/_b-wave";
 
 // Print
 @import "global/_print";

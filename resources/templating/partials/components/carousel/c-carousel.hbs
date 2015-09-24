@@ -7,7 +7,7 @@ component: carousel
 	<ul class="carousel__list">
 		{{#each data}}
 			<li class="carousel__list-item{{#if itemClass}} {{itemClass}}{{/if}}">
-				<img src="{{carouselContent}}" alt="Carousel Image" class="carousel__image"/>
+				{{> c-figure }}
 			</li>
 		{{/each}}
 	</ul>

@@ -1,0 +1,71 @@
+/* ===================================================
+STAGE
+=================================================== */
+
+.r-stage-top {
+	position: relative;
+	margin-top: -$margin-base * 15;
+	z-index: -1;
+}
+
+.r-stage-bottom {
+	@include centering(h);
+
+	position: absolute;
+	bottom: 75%;
+	z-index: 1;
+
+	@include media($bp-desktop-l) {
+		bottom: 45%;
+	}
+
+	@include media($bp-mobile-p) {
+		bottom: 82%;
+	}
+
+	.stage-bottom__headline {
+		color: $color-white;
+		font-weight: bold;
+		font-size: 2.4rem;
+		text-align: center;
+		margin-bottom: 0;
+		position: relative;
+
+		&::before {
+			@extend %pseudo;
+
+			height: 100px;
+			width: 100px;
+			background-color: transparent;
+			border: 6px solid $color-green;
+			border-radius: 50%;
+			left: 20%;
+			top: 50px;
+
+			@include media($bp-tablet-p) {
+				height: 70px;
+				width: 70px;
+				left: 45%;
+				top: 40px;
+			}
+
+			@include media($bp-mobile-l) {
+				display: none;
+			}
+		}
+
+		&::after {
+			@extend %pseudo;
+
+			width: 6px;
+			height: 450px;
+			background-color: $color-green;
+			top: 150px;
+			left: 43%;
+
+			@include media($bp-tablet-p) {
+				display: none;
+			}
+		}
+	}
+}

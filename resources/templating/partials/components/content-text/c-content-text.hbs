@@ -1,0 +1,21 @@
+---
+component: content text
+---
+
+<div class="c-content-text{{#if contentTextModifierClass}}--{{contentTextModifierClass}}{{/if}}{{#if contentTextClass}} {{contentTextClass}}{{/if}}"
+     data-css="c-content-text">
+	<div class="content-text__inner">
+		<h2 class="content-text__headline{{#if headlineClass}} {{headlineClass}}{{/if}}">
+			{{contentHeadline}}
+		</h2>
+
+		<p class="content-text__text">
+			{{{contentText}}}
+		</p>
+	</div>
+	{{#if contentTextFigure}}
+		<div class="content-text__image-wrapper">
+			<img class="content-text__image" src="{{contentTextFigure}}" alt="Content Image"/>
+		</div>
+	{{/if}}
+</div>
