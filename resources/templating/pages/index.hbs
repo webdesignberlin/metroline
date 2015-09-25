@@ -11,12 +11,20 @@ sortOrder: 01
 			{{#with index.content-text-1}}
 				{{> c-content-text }}
 			{{/with}}
+			<div class="line-wrapper is-centered">
+				<div class="line is-ani-2"></div>
+			</div>
 		{{/wrapWith}}
 
 		{{#wrapWith "section" classes="bg-highlight-2"}}
 			{{#with index.content-text-2}}
 				{{> c-content-text }}
 			{{/with}}
+			<div class="line-wrapper is-centered ">
+				<div class="line is-ani-3"></div>
+				<div class="line is-rotated-left is-ani-4"></div>
+				<div class="line is-last is-ani-5"></div>
+			</div>
 		{{/wrapWith}}
 
 	{{/content}}

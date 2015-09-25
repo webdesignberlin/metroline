@@ -6,9 +6,10 @@ LOGO
 	margin-left: $margin-base * 5.5;
 
 	@include media($bp-tablet-p) {
-		@include transform (scale(.8));
+		transform: scale(0.8);
+		transform-origin: 0 0;
 
-		margin-left: 0;
+		margin-left: $margin-base;
 	}
 
 }

@@ -2,6 +2,10 @@
 STAGE
 =================================================== */
 
+.r-stage {
+	position: relative;
+}
+
 .r-stage-top {
 	position: relative;
 	margin-top: -$margin-base * 15;
@@ -9,10 +13,7 @@ STAGE
 }
 
 .r-stage-bottom {
-	@include centering(h);
 
-	position: absolute;
-	bottom: 75%;
 	z-index: 1;
 
 	@include media($bp-desktop-l) {
@@ -24,47 +25,51 @@ STAGE
 	}
 
 	.stage-bottom__headline {
+		@include prefix('transform', translate(-50%, -100%));
+
+		left: 50%;
+		position: absolute;
+		top: calc(50% - 122px);
 		color: $color-white;
 		font-weight: bold;
 		font-size: 2.4rem;
 		text-align: center;
 		margin-bottom: 0;
-		position: relative;
+
+		@include media($bp-tablet-p) {
+			top: calc(50% - 92px);
+		}
+
+		@include media($bp-mobile-p) {
+			top: calc(85% - 92px);
+		}
 
 		&::before {
 			@extend %pseudo;
+			@include centering(h);
 
 			height: 100px;
 			width: 100px;
 			background-color: transparent;
-			border: 6px solid $color-green;
+			border: solid $color-green;
+			border-width: 0;
 			border-radius: 50%;
-			left: 20%;
 			top: 50px;
 
 			@include media($bp-tablet-p) {
 				height: 70px;
 				width: 70px;
-				left: 45%;
-				top: 40px;
 			}
 
 			@include media($bp-mobile-l) {
-				display: none;
+
 			}
+
 		}
 
-		&::after {
-			@extend %pseudo;
-
-			width: 6px;
-			height: 450px;
-			background-color: $color-green;
-			top: 150px;
-			left: 43%;
-
-			@include media($bp-tablet-p) {
-				display: none;
+		&.is-ani-border {
+			&::before {
+				@include prefix(animation, ani-border $transition-duration $transition-ease-method forwards);
 			}
 		}
 	}

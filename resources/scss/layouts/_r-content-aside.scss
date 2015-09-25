@@ -8,6 +8,8 @@ REGION CONTENT ASIDE
 	position: absolute;
 	transform: translateY(-200%);
 	right: 13%;
+	z-index: 5;
+	background-color: $color-white;
 
 	@include media($bp-tablet-p) {
 		transform: translateY(-150%);

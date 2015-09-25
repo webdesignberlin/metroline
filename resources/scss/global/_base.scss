@@ -17,7 +17,7 @@ body {
 }
 
 h2 {
-	font-family: serif;
+	font-family: 'Roboto Slab', serif;
 	font-size: 4rem;
 	line-height: 1.1;
 	text-transform: uppercase;
@@ -38,6 +38,7 @@ p {
 
 .section-wrapper {
 	padding: $margin-base * 8 0;
+	position: relative;
 
 	&:first-child {
 		padding-top: 0;
@@ -55,3 +56,150 @@ p {
 		background-color: $bg-highlight-2;
 	}
 }
+
+.line-wrapper {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	z-index: 1;
+
+	@include media($bp-mobile-p) {
+		display: none;
+	}
+
+	&.is-centered,
+	.is-centered {
+		@include centering(h);
+	}
+
+	.line {
+		width: 6px;
+		background-color: $color-green;
+		position: absolute;
+	}
+
+	.is-rotated-left {
+		transform: rotate(90deg) translateX(-6px);
+		transform-origin: 0 0;
+		margin-right: -6px;
+		top: 87%;
+	}
+
+	.is-last {
+		top: 87%;
+		left: -380px;
+
+		@include media($bp-tablet-p) {
+			left: -160px;
+		}
+	}
+
+	.is-first {
+		@include prefix(animation, ani-height $transition-duration * 10 $transition-ease-method $transition-duration forwards);
+		top: 50%;
+
+		@include media($bp-mobile-p) {
+			top: 85%;
+		}
+	}
+
+	.is-ani-2 {
+		@include prefix(animation, ani-height-2 $transition-duration * 10 $transition-ease-method $transition-duration * 10 forwards);
+
+	}
+
+	.is-ani-3 {
+		@include prefix(animation, ani-height-3 $transition-duration * 10 $transition-ease-method $transition-duration * 20 forwards);
+	}
+
+	.is-ani-4 {
+		@include prefix(animation, ani-height-4 $transition-duration * 10 $transition-ease-method $transition-duration * 30 forwards);
+
+		@include media($bp-tablet-p) {
+			@include prefix(animation, ani-height-4-1 $transition-duration * 10 $transition-ease-method $transition-duration * 30 forwards);
+		}
+	}
+
+	.is-ani-5 {
+		@include prefix(animation, ani-height-5 $transition-duration * 5 $transition-ease-method $transition-duration * 40 forwards);
+	}
+}
+
+@include keyframes(ani-border) {
+
+	0% {
+		border-width: 0;
+	}
+
+	100% {
+		border-width: 6px;
+	}
+}
+
+@include keyframes(ani-height) {
+
+	0% {
+		height: 0;
+	}
+
+	100% {
+		height: 50%;
+	}
+}
+
+@include keyframes(ani-height-2) {
+
+	0% {
+		height: 0;
+	}
+
+	100% {
+		height: 100%;
+	}
+}
+
+@include keyframes(ani-height-3) {
+
+	0% {
+		height: 0;
+	}
+
+	100% {
+		height: 87%;
+	}
+}
+
+@include keyframes(ani-height-4) {
+
+	0% {
+		height: 0;
+	}
+
+	100% {
+		height: 380px;
+	}
+}
+
+@include keyframes(ani-height-4-1) {
+
+	0% {
+		height: 0;
+	}
+
+	100% {
+		height: 160px;
+	}
+}
+
+@include keyframes(ani-height-5) {
+
+	0% {
+		height: 0;
+	}
+
+	100% {
+		height: 13%;
+	}
+}
+
+

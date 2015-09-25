@@ -10,6 +10,7 @@ LANGUAGE SWITCH
 
 	@include media($bp-tablet-p) {
 		margin-left: 0;
+		opacity: 0.9;
 	}
 
 	.language-switch__list-item {

@@ -2,10 +2,11 @@
 	@include outer-container;
 
 	@include media($bp-tablet-p) {
-		@include span-columns(11);
+		@include span-columns(12);
 
 		float: none;
 		margin-right: auto;
+		padding: 0 $margin-base*2;
 
 		&:last-child {
 			margin-right: auto;

@@ -4,6 +4,8 @@ REGION HEADER
 
 .r-header {
 	overflow: hidden;
+	position: relative;
+	    z-index: 10;
 
 	.r-header-top {
 		@include span-columns(12);
