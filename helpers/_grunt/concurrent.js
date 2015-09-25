@@ -8,7 +8,7 @@ module.exports = {
 		}
 	},
 	hintAndDocs: {
-		tasks: [,
+		tasks: [
 			'htmlmin',
 			'htmlhint'
 		],

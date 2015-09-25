@@ -16,31 +16,12 @@ NAVIGATION
 	}
 
 	.navigation__checkbox:checked {
-		+ .navigation__label {
-			.navigation__icon {
 
-				&:nth-child(1) {
-					@include transform(rotate(135deg));
-
-					top: 16px;
-				}
-
-				&:nth-child(2) {
-					opacity: 0;
-					left: -60px;
-				}
-
-				&:nth-child(3) {
-					@include transform(rotate(-135deg));
-
-					top: 16px;
-				}
-			}
 			+ .navigation__list {
-				transition: transform $transition-duration $transition-ease-method;
-				transform: translateX(7px);
+				transition: right $transition-duration $transition-ease-method;
+				right: 0;
 			}
-		}
+
 
 	}
 
@@ -101,15 +82,15 @@ NAVIGATION
 
 		@include media($bp-tablet-p) {
 			background-color: $color-green;
-			transition: transform $transition-duration $transition-ease-method;
-			transform: translateX(150px);
+			transition: right $transition-duration $transition-ease-method;
+			right: -100%;
 			position: fixed;
 			top: 42px;
 			padding: 0 $margin-base;
 			margin-right: 0;
 			opacity: 0.9;
 			z-index: 10;
-			width: 145px;
+			width: 140px;
 		}
 	}
 
