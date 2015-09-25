@@ -3,5 +3,5 @@ REGION CONTENT
 =================================================== */
 
 .r-content {
-	overflow: hidden;
+	@include float;
 }

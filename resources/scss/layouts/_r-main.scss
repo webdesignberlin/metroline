@@ -3,7 +3,8 @@ MAIN REGION
 =================================================== */
 
 .r-main {
+	@include float;
+
 	position: relative;
-	overflow: hidden;
 	width: 100%;
 }

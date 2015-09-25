@@ -3,6 +3,8 @@ FOOTER REGION
 =================================================== */
 
 .r-footer {
+	@include float;
+
 	position: relative;
 	background-color: $color-green;
 	padding: $margin-base * 2 0;
